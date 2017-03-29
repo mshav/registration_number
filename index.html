@@ -1,17 +1,39 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/registration_number.css">
-    <title></title>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Numbers</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="registration_number.css">
+        <script src="registration_number.js"></script>
     </head>
     <body>
-    <h1>Registration Numbers</h1>
-    <br>
-    <br>
-    <ul><li><div class="regiNo"><h4>CA 34267</h4></div>
-            </li></ul>
+            <h2 align="center">Registration Number</h2>
+
+            <form class="regNumbers" action="index.html" method="post" align="center">
+                <input type="text" id="myInput" placeholder="Enter registration number">
+                <button type="button" id="myAddButton" onclick="myFunction();" />Add</button>
+
+                <button type="button" id="filter" onclick="allTown();">Filter</button> <br>
+
+                <label for="bellville">Bellville</label>
+                <input type="radio" name="registration_number" id="bellville" value="bellville">
+
+                <label for="capetown">Cape Town</label>
+                <input type="radio" name="registration_number" id="capetown" value="capetown">
+
+                <label for="paarl">Paarl</label>
+                <input type="radio" name="registration_number" id="paarl" value="paarl">
+
+                <label for="all">All</label>
+                <input type="radio" name="registration_number" id="all" value="all"><br>
+
+            </form>
+
+            <div class="showInput"><ul id="myList" align="center"><b><u>Your Number Plate</b></u></ul></div>
+
+
     </body>
-    </html>
+</html>
